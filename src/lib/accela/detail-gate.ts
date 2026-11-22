@@ -1,0 +1,1 @@
+const c=3,w=300;let e=0;const n=[];let o=0;function a(t){return new Promise(i=>setTimeout(i,t))}async function r(){e>=3&&await new Promise(i=>n.push(i)),e+=1;const t=o-Date.now();t>0&&await a(t),o=Date.now()+300}function s(){e-=1;const t=n.shift();t&&t()}export async function withDetailFetchGate(t){await r();try{return await t()}finally{s()}}

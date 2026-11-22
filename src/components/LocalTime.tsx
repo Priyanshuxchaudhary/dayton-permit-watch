@@ -1,0 +1,1 @@
+"use client";import{useEffect as l,useState as s}from"react";import{getStoredTimezone as u}from"@/lib/timezone";export default function a({iso:e,timeOnly:t=!1}){const[i,r]=s(null);return l(()=>{const n=new Date(e),o=u();r(t?n.toLocaleTimeString(void 0,{timeZone:o}):n.toLocaleString(void 0,{timeZone:o}))},[e,t]),<>{i??"…"}</>}
